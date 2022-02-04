@@ -6,8 +6,6 @@ export class CreateProfileDto {
 }
 
 export class UpdateProfileDto {
-  id: number;
   name?: string;
   username?: string;
-  role?: string;
 }
