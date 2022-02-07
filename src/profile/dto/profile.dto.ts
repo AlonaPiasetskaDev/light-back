@@ -1,4 +1,4 @@
-export class CreateProductDto {
+export class CreateProfileDto {
   name: string;
   description: string;
   imageURL: string;
