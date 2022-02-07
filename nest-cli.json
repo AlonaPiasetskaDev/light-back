@@ -9,7 +9,7 @@
           "dtoFileNameSuffix": [
             ".entity.ts",
             ".dto.ts",
-            ".module.ts"
+            ".model.ts"
           ],
           "controllerFileNameSuffix": [
             ".controller.ts"

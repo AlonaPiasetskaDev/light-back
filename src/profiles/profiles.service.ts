@@ -1,15 +1,25 @@
 import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
 import { CreateProfileDto } from './dto/create-profile.dto';
 import { UpdateProfileDto } from './dto/update-profile.dto';
+import { Profile, ProfileDocument } from './profile.model';
 
 @Injectable()
 export class ProfilesService {
-  create(createProfileDto: CreateProfileDto) {
-    return 'This action adds a new profile';
+
+  constructor(
+    @InjectModel('Profile') private readonly profileModel: Model<ProfileDocument>) { }
+
+  async create(createProfileDto: CreateProfileDto): Promise<Profile> {
+    const createdProfile = new this.profileModel(createProfileDto);
+    console.log(createProfileDto);
+    console.log(createdProfile);
+    return createdProfile.save();
   }
 
-  findAll() {
-    return `This action returns all profiles`;
+  async findAll(): Promise<Profile[]> {
+    return await this.profileModel.find().exec();
   }
 
   findOne(id: number) {

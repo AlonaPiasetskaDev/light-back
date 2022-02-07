@@ -10,7 +10,7 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot("mongodb+srv://root:enxx5z42@cluster0.2hsff.mongodb.net/Cluster0?retryWrites=true&w=majority"),
-    UsersModule,
+    // UsersModule,
     ProfilesModule
   ],
   controllers: [AppController],

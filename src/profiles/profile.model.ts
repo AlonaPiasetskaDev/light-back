@@ -1,17 +1,23 @@
 import { Schema, Document, Date } from "mongoose";
 import { Prop, SchemaFactory } from '@nestjs/mongoose';
 
+export type ProfileDocument = Profile & Document;
 
-export class Profile extends Document {
+export class Profile {
+  @Prop({ required: true })
+  username: string;
 
-  _id: { type: Schema.Types.ObjectId };
+  @Prop({ required: true })
+  email: string;
 
-  address: { type: String, required: false };
-  site: { type: String, required: false };
-  age: { type: Number, required: false };
-  gender: { type: String, required: false };
-  avatar: { type: String, required: false };
-  created: { type: Schema.Types.Date, default: Date };
+  @Prop({ required: false })
+  age: number;
+
+  @Prop({ required: false })
+  gender: string;
+
+  @Prop({ required: false })
+  avatar: string;
 }
 
 export const ProfileSchema = SchemaFactory.createForClass(Profile);
