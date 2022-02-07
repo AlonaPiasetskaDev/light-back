@@ -4,15 +4,12 @@
   "compilerOptions": {
     "plugins": [
       {
-        "name": "@nestjs/swagger/plugin",
+        "name": "@nestjs/swagger",
         "options": {
+          "classValidatorShim": false,
+          "introspectComments": true,
           "dtoFileNameSuffix": [
-            ".entity.ts",
-            ".dto.ts",
-            ".model.ts"
-          ],
-          "controllerFileNameSuffix": [
-            ".controller.ts"
+            ".dto.ts", ".entity.ts", ".model.ts"
           ]
         }
       }
