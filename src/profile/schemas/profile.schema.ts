@@ -1,6 +1,6 @@
 import { Schema } from 'mongoose';
 
-export const ProductSchema = new Schema({
+export const ProfileSchema = new Schema({
   name: String,
   description: String,
   imageURL: String,

@@ -1,6 +1,6 @@
 import { Document } from 'mongoose';
 
-export interface Product extends Document {
+export interface Profile extends Document {
   readonly _id?: string;
   readonly name: string;
   readonly description: string;
