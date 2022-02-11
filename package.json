@@ -1,8 +1,8 @@
 {
-  "name": "nestjs-profiles-api",
+  "name": "nestjs-light-back",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "alona.piasetska.dev@gmail.com",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
