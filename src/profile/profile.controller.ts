@@ -4,7 +4,8 @@ import { ProfileService } from './profile.service';
 import { Profile } from './interfaces/profile.interface';
 import { ApiBody, ApiExtraModels } from '@nestjs/swagger';
 
-@Controller('profile')
+@Controller('profiles')
+
 export class ProfileController {
 
   constructor(private profileService: ProfileService) { }

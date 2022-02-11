@@ -16,7 +16,7 @@ export class ProfileService {
   async getProfile(profileId: string): Promise<Profile> {
     return await this.profileModel.findById(profileId);
   }
-  
+
   async createProfile(createProfileDto: CreateProfileDto): Promise<Profile> {
     const newProfile = new this.profileModel(createProfileDto);
     return await newProfile.save();
@@ -25,7 +25,7 @@ export class ProfileService {
   async deleteProfile(profileId: string): Promise<Profile> {
     return await this.profileModel.findByIdAndDelete(profileId);
   }
-  
+
   async updateProfile(profileId: string, createProfileDto: CreateProfileDto): Promise<Profile> {
     return await this.profileModel.findByIdAndUpdate(profileId, createProfileDto, { new: true });
   }
